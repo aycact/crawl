@@ -1,0 +1,13 @@
+services:
+  db:
+    image: clickhouse/clickhouse-server:latest
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    restart: always
+    environment:
+      - CLICKHOUSE_CONFIG=/etc/clickhouse-server/config.xml
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
