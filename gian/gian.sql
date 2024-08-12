@@ -3,12 +3,10 @@ CREATE TABLE test(
     name STRING NOT NULL,
     age INT NOT NULL
 );
-CREATE PROCEDURE insert_test(name STRING, age INT) AS 
-$$
-DECLARE
-    pname STRING;
-    page INT;
-BEGIN
-    INSERT INTO test(name, age) VALUES(pname, page);
-END;
-$$ LANGUAGE SQL;
+CREATE PROCEDURE insert_test(pn STRING, pa INT)
+LANGUAGE SQL
+AS $$
+    INSERT INTO test(name, age) VALUES(pn, pa);
+$$;
+CALL insert_test('Gian', 20);
+SELECT * FROM test;
