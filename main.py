@@ -1,6 +1,6 @@
 import datetime
 import gc
-from bot import scrap
+from controller.bot import scrap
 from concurrent.futures import ThreadPoolExecutor, as_completed
 can = ["giap", "at", "binh", "dinh", "mau", "ky", "canh", "tan", "nham", "quy"]
 chi = ["ty", "suu", "dan", "mao", "thin", "ti", "ngo", "mui", "than", "dau", "tuat", "hoi"]

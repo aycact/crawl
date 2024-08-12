@@ -1,0 +1,18 @@
+services:
+  roach:
+    hostname: roach-single
+    image: cockroachdb/cockroach:latest
+    ports:
+      - "26257:26257"
+      - "8080:8080"
+      - "2222:22"
+    environment:
+      COCKROACH_DATABASE: tuvi
+      COCKROACH_USER: ayclqt
+      COCKROACH_PASSWORD: ayclqt
+      COCKROACH_SECURE_MODE: secure
+      COCKROACH_CERTS_DIR: /cockroach/cockroach-certs
+      COCKROACH_DATA_DIR: /cockroach/cockroach-data
+    command: 
+    - "start-single-node"
+    restart: always
