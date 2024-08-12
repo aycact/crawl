@@ -1,2 +1,2 @@
-/chromedriver.exe
-/.env
+*chromedriver.exe
+*.env
